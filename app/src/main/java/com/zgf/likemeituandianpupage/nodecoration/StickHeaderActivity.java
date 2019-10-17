@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
+import com.zgf.likemeituandianpupage.MainActivity;
 import com.zgf.likemeituandianpupage.R;
 
 import java.util.ArrayList;
@@ -22,6 +25,10 @@ public class StickHeaderActivity extends AppCompatActivity {
     private TextView textView;
 
     private List<DataModel> list;
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, StickHeaderActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
